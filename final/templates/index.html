@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+<body>
+    {% block body_title %}
+    <h1>This is My Blog</h1>
+    {% endblock %}
+    {% block content %}
+
+    <!-- 區塊1 -->
+    <div id="main" class="container">
+        {% for post in posts %}
+        <div class="row" id="pictext">
+
+            {% load static %}
+            <div class="col-5 col-sm-6 col-xs-12" id="first">
+                <img class="col-m-12 col-sm-12" src="../static/image/{{ post.img }}" alt="xx">
+            </div>
+            <br>
+            <div class="col-7 col-sm-6 col-xs-12" id="second">
+                <h1 style="font-weight: bold;">{{post.title}}</h4>
+                    <p>{{post.body | truncatechars:5}}</p>
+                    <p style="font-size: 10pt; text-align: right;">
+                        發佈時間：{{ post.pub_date | date:"Y-m-d G:i"}}
+                    </p>
+                    <a class="main-more-button" href="post/{{post.id}}">more</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}
+</body>
+
+
+</html>

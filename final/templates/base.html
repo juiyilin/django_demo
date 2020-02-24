@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/base.css">
+</head>
+{% include 'nav.html' %}
+
+<!-- banner -->
+<header>
+    <div class="container-fluid" id='jum'>
+        <div class="row align-item-center ">
+            <div class="col text-white " style='padding:10% 3%;'>
+                <h1 class="display-4 text-right">This is My Website</h1>
+                <p class="lead text-right">This is a modified jumbotron that occupies the entire horizontal space of its
+                    parent.</p>
+                <img id='banner' src="https://picsum.photos/id/0/800/600" class="" alt="...">
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="row">{% block body_title %}{% endblock %}</div>
+    </div>
+
+    {% block content %}{% endblock %}
+</body>
+{% include 'footer.html' %}
+
+</html>
