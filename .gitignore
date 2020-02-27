@@ -1,2 +1,8 @@
+.vscode
+*.pyc
 __pycache__
-*.sqlite3
+db.sqlite3
+Include
+Lib
+Scripts
+tcl
