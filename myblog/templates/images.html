@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}我有話要說{% endblock %}
+{% block content %}
+{%load static%}
+<div class='container'>
+    {% for i in showimg %}
+    <p>{{i.text}}</p>
+    <p>{{i.img}}</p>
+    <p>{{i.imgname}}</p>
+    <img src="{%url 'index'%}image/{{i.img}}" alt="">
+    <img src="{% static '1.png' %}" alt="">
+
+    {% endfor %}
+
+</div>
+{% endblock %}
