@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+    <div class="container">
+        <div class="row">
+            <nav class="col-3" id="myScrollspy" style="border: royalblue 2px solid;">
+                <ul class="nav nav-pills flex-column sticky-top">
+                    <li class="nav-item pill-1">
+                        <a class="nav-link active" href="#section1">Section 1</a>
+                    </li>
+                    <li class="nav-item pill-1">
+                        <a class="nav-link" href="#section2">Section 2</a>
+                    </li>
+                    <li class="nav-item pill-1">
+                        <a class="nav-link" href="#section3">Section 3</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="col-9">
+                <div id="section1" class="bg-success">
+                    <h1>Section 1</h1>
+                    <p>Try to scroll this section and look at the navigation list while
+                        scrolling!</p>
+                </div>
+                <div id="section2" class="bg-warning">
+                    <h1>Section 2</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling! Lorem ipsum dolor,
+                        sit amet consectetur adipisicing elit. Animi, velit praesentium, voluptatem perspiciatis
+                        deleniti et incidunt nam omnis consectetur nesciunt quisquam qui ullam vel! Ex ipsam voluptatum
+                        hic tenetur facere! Odit dicta, nemo deleniti nobis quis, odio corporis possimus ipsum in
+                        nesciunt iusto omnis fugiat dignissimos eum doloremque necessitatibus, sunt laborum
+                        exercitationem. Corrupti ut alias officiis modi magni, exercitationem voluptas beatae aliquid
+                        error illo veniam vitae perspiciatis reiciendis voluptatum quis laudantium, in dolorem delectus
+                        at natus. Asperiores reiciendis, quis possimus quod tempora nisi cupiditate deleniti fugiat
+                        explicabo, esse excepturi, ducimus itaque temporibus delectus sed adipisci soluta. Qui saepe
+                        porro modi?</p>
+                </div>
+                <div id="section3" class="bg-secondary">
+                    <h1>Section 3</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                <div id="section41" class="bg-danger">
+                    <h1>Section 4-1</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                <div id="section42" class="bg-info">
+                    <h1>Section 4-2</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+{% endblock %}

@@ -74,3 +74,7 @@ def wordtoimg(request):
 
     showimg = Postimg.objects.all()
     return render(request, 'images.html', locals())
+
+
+def profile(request):
+    return render(request, 'profile.html', locals())

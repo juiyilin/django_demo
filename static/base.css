@@ -51,3 +51,18 @@ li:hover {
     bottom: 32px;
     right: 36px;
 }
+
+/* profile.html */
+.nav-pills .pill-1 .nav-link {
+    background-color: transparent;
+    color: black;
+}
+
+.nav-pills .pill-1 .nav-link.active {
+    background-color: transparent;
+    color: gray;
+}
+
+p {
+    color: rebeccapurple;
+}
