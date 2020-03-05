@@ -10,12 +10,21 @@
     z-index: -1;
 }
 
+/* navbar */
 li {
     color: #007bff;
 }
 
 li:hover {
     text-shadow: 1px 1px 2px rgb(200, 200, 200);
+}
+
+/* title */
+#title {
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: black;
+    /* background-color: saddlebrown; */
 }
 
 .top-button {
@@ -55,14 +64,10 @@ li:hover {
 /* profile.html */
 .nav-pills .pill-1 .nav-link {
     background-color: transparent;
-    color: black;
+    color: rgb(138, 138, 138);
 }
 
 .nav-pills .pill-1 .nav-link.active {
     background-color: transparent;
-    color: gray;
-}
-
-p {
-    color: rebeccapurple;
+    color: black;
 }
