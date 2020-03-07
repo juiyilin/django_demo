@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -128,8 +129,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-MEDIA_ROOT = 'myblog/static/image/'  # 存放admin上傳圖片的路徑
-MEDIA_URL = '/image/'
+MEDIA_ROOT = 'static/image/'  # 存放admin上傳圖片的路徑
+MEDIA_URL = 'image/'
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LdzBtYUAAAAAOkYvtNVLrUIAL14-JLsMfiLke6D'
 
 # Activate Django-Heroku.
