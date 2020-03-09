@@ -61,6 +61,12 @@ li:hover {
     right: 36px;
 }
 
+
+body {
+    font-family: Microsoft JhengHei;
+    unicode-range: U+4E00-9FFF;
+}
+
 /* profile.html */
 .nav-pills .pill-1 .nav-link {
     background-color: transparent;
@@ -70,4 +76,13 @@ li:hover {
 .nav-pills .pill-1 .nav-link.active {
     background-color: transparent;
     color: black;
+}
+
+#myScrollspy {
+    font-size: small;
+}
+
+.em {
+    border-left: #007bffc5 solid 5px;
+    background-color: rgba(216, 215, 215, 0.616);
 }

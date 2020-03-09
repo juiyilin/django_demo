@@ -3,6 +3,10 @@
 
 
 
+{% block body_title %}
+<h1>learning history</h1>
+{% endblock %}
+
 {% block content %}
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
@@ -12,12 +16,10 @@
             <nav class="col-3 col-md-2" id="myScrollspy">
                 <ul class="nav nav-pills flex-column sticky-top">
                     <li class="nav-item pill-1 ">
-                        <a class="nav-link active px-0 font-italic" href="#section1">Section
-                            1</a>
+                        <a class="nav-link active px-0 font-italic" href="#section1">畢業~2018</a>
                     </li>
-                    <li class="nav-item pill-1 px-0">
-                        <a class="nav-link px-0 font-italic" href=" #section2">Section
-                            2</a>
+                    <li class="nav-item pill-1 ">
+                        <a class="nav-link px-0 font-italic" href="#section2">2019~現在</a>
                     </li>
                     <li class="nav-item pill-1">
                         <a class="nav-link px-0 font-italic" href="#section3">Section 3</a>
@@ -25,14 +27,17 @@
 
                 </ul>
             </nav>
-            <div class="col-9 col-md-10 pr-0">
-                <div id="section1" class="bg-success p-2">
-                    <p class="font-italic">Section 1</p>
-                    <p>Try to scroll this section and look at the navigation list while
-                        scrolling!</p>
+            <div class="col-9 col-md-10 px-0">
+                <div id="section1" class="pl-5">
+                    <p class="font-italic">畢業~2018</p>
+                    <div class="em py-4 ml-3">
+                        <em>累積職場經驗，學習影像處理軟體、程式啟蒙</em>
+                    </div><br>
+                    <p>大學畢業後，我認為先進入職場有助於了解自己需要或缺少的技能。我做為公司的業務與行銷人員，負責設計網站與展覽之宣傳圖片。我利用假日學習Photoshop與Illustrator等影像處理軟體，以求更符合公司與自我要求的設計。<br>同時也作為與官網維護廠商溝通的橋樑，傳達公司對網頁的修改想法。主管也很栽培我，讓我參加維護廠商舉辦的後台維護課程。經由廠商課程的學習與幾次的嘗試，我開始試著自己從管理後台修改網頁前端的語法，我認為這是之後想學習程式語言的契機之一。
+                    </p>
                 </div>
-                <div id="section2" class="bg-warning p-2">
-                    <p class="font-italic">Section 2</p>
+                <div id="section2" class="bg-warning p-5">
+                    <p class="font-italic">2019~現在</p>
                     <p>Try to scroll this section and look at the navigation list while scrolling! Lorem ipsum dolor,
                         sit amet consectetur adipisicing elit. Animi, velit praesentium, voluptatem perspiciatis
                         deleniti et incidunt nam omnis consectetur nesciunt quisquam qui ullam vel! Ex ipsam voluptatum
