@@ -79,10 +79,11 @@ body {
 }
 
 #myScrollspy {
-    font-size: small;
+    font-size: x-small;
 }
 
 .em {
-    border-left: #007bffc5 solid 5px;
+
     background-color: rgba(216, 215, 215, 0.616);
+    color: rgb(138, 138, 138);
 }
