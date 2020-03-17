@@ -1,6 +1,10 @@
 #jum {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.8);
+    background-repeat: no-repeat;
+    height: 100%;
 }
+
+
 
 #banner {
     position: absolute;
@@ -75,15 +79,39 @@ body {
 
 .nav-pills .pill-1 .nav-link.active {
     background-color: transparent;
-    color: black;
+    color: #007bff;
 }
 
 #myScrollspy {
     font-size: x-small;
 }
 
+.pl-5>h4 {
+    font-weight: bold;
+}
+
 .em {
 
     background-color: rgba(216, 215, 215, 0.616);
     color: rgb(138, 138, 138);
+}
+
+@media(max-width:500px) {
+
+    /* profile */
+    figure {
+        flex-direction: column;
+    }
+
+    /* base */
+    #jum {
+        background-size: cover;
+        height: 100%;
+    }
+
+    #jum h1,
+    #jum p {
+        font-size: 80%;
+    }
+
 }
