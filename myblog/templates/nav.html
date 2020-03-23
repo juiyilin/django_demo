@@ -1,10 +1,13 @@
+{%load static%}
+
 <body>
     <!-- 導覽列 -->
     <div class="container-fluid d-flex flex-row flex-wrap shadow-sm p-2 bg-white ">
         <div class="col-lg-1 col-12 ">
             <nav class="d-flex nav justify-content-center ">
                 <ul class='nav '>
-                    <li class="nav-item"><a class="nav-link text-reset" href="/">HOME</a></li>
+
+                    <a class="nav-link" href="/"><img src="{%static 'home.svg'%}" alt=""></a>
                 </ul>
             </nav>
         </div>
@@ -18,7 +21,7 @@
                     <li class="nav-item">
                         <a href="/images" class="nav-link text-reset">images</a></li>
                     <li class="nav-item">
-                        <a href="/profile" class="nav-link text-reset">profile</a></li>
+                        <a href="/profile" class="nav-link text-reset">history</a></li>
                     <li class="nav-item">
                         <a href="/admin" class="nav-link text-reset">login</a></li>
                 </ul>

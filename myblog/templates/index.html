@@ -8,31 +8,56 @@
 
 <body>
     {% block body_title %}
-    <h1>This is My Blog</h1>
+    <h1>Personal Data</h1>
     {% endblock %}
     {% block content %}
-
-    <!-- 區塊1 -->
-    <div id="main" class="container">
-        {% for post in posts %}
-        <div class="row" id="pictext">
-
-            {% load static %}
-            <div class="col-5 col-sm-6 col-xs-12" id="first">
-                <img class="col-m-12 col-sm-12" src="../static/image/{{ post.img }}" alt="xx">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <h4 class="font-weight-bold">Skill</h4>
+                <ul>
+                    <li class='disabled nav-link text-reset'>Python</li>
+                    <li class='disabled nav-link text-reset'>HTML</li>
+                    <li class='disabled nav-link text-reset'>CSS</li>
+                    <li class='disabled nav-link text-reset'>Photoshop</li>
+                    <li class='disabled nav-link text-reset'>Illustrator</li>
+                </ul>
             </div>
-            <br>
-            <div class="col-7 col-sm-6 col-xs-12" id="second">
-                <h1 style="font-weight: bold;">{{post.title}}</h4>
-                    <p>{{post.body | truncatechars:5}}</p>
-                    <p style="font-size: 10pt; text-align: right;">
-                        發佈時間：{{ post.pub_date | date:"Y-m-d G:i"}}
-                    </p>
-                    <a class="main-more-button" href="post/{{post.id}}">more</a>
+            <div class="col-md-6 col-12">
+                <h4 class="font-weight-bold">Education</h4>
+                <ul>
+                    <li class='disabled nav-link text-body'>東吳大學經濟系Soochow University Department of Economics</li>
+                </ul>
             </div>
         </div>
-        {% endfor %}
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="font-weight-bold">Work Experience</h4>
+                <ul>
+
+                    <li class="disabled nav-link text-reset">財團法人台灣經濟研究院Taiwan Institute of Economic Research</li>
+                    <ul>
+                        <li class='disabled nav-link text-reset font-weight-lighter'>APEC第31屆汽車對話會議 The 31<sup>th</sup>
+                            APEC
+                            Automotive
+                            Dialogue
+                        </li>
+                        <li class='disabled nav-link text-reset font-weight-lighter'>APEC 業務研習營</li>
+                    </ul>
+
+
+                    <li class="disabled nav-link text-reset">康武企業股份有限公司Rekrow Industrial Inc.</li>
+                    <ul>
+                        <li class='disabled nav-link text-reset font-weight-lighter'>2017台灣五金展Taiwan Hardware Show</li>
+                    </ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
     {% endblock %}
 </body>
