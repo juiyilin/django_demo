@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-MEDIA_ROOT = 'static/image/'  # 存放admin上傳圖片的路徑
+MEDIA_ROOT = 'static/uploadimage/'  # 存放admin上傳圖片的路徑
 MEDIA_URL = 'image/'
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LdzBtYUAAAAAOkYvtNVLrUIAL14-JLsMfiLke6D'
 
