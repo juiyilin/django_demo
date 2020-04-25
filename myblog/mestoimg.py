@@ -34,7 +34,8 @@ def picture(lines, words2):
     # 同時決定字的大小
 
     font = ImageFont.truetype(
-        font='../static/fonts/msjhbd.ttc', size=40)
+        # font='../static/fonts/msjhbd.ttc', size=40)
+        font='/staticfiles/fonts/msjhbd.ttc', size=40)
 
     ImDr2 = ImageDraw.Draw(image)
     ImDr2.text(xy=(5, 0), text=words2, font=font,
