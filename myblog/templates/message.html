@@ -1,0 +1,36 @@
+<!-- post2db.html (HTML_Form02) -->
+{% extends "base.html" %}
+{% block body_title %}
+<h1>MESSAGE</h1>
+{% endblock %}
+{% block content %}
+<div class='container'>
+    {% if message %}
+    <div>{{ message }}</div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-6">
+            <form name='my form' action='.' method='POST'>
+                {% csrf_token %}
+                <table>
+                    {{ post_form.as_table }}
+                </table>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey="6LdzBtYUAAAAABQBQWZSTatJ1tgjUe0pDO-trTnu"></div>
+                <input type='submit' value='張貼'>
+                <input type='reset' value='清除重填'>
+            </form>
+        </div>
+        <div class="col-md-6">
+            {% for post in posts %}
+            <p> {{post.name}} <br>
+                {{post.pub_date}}</p>
+            <p style="border: 0.5px solid gray;border-radius: 4px;"> {{post.text}}</p>
+
+            <p>-----------------------------</p>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

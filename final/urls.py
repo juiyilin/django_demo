@@ -24,8 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('post2db/', views.post2db),
-    path('images/', views.wordtoimg),
+    path('message/', views.post2db),
     path('profile/', views.profile),
     path("captcha/", include("captcha.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.template.loader import get_template
-from .models import Post, Postimg
+from .models import Post
 from datetime import datetime
 from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
-from myblog import models, forms, mestoimg
+from myblog import models, forms
 import json
 import urllib
 from django.conf import settings
@@ -23,7 +23,7 @@ def index(request):
 
 
 def post2db(request):
-    pmess = Postimg.objects.all()
+    posts = Post.objects.all()
 
     if request.method == 'POST':
         post_form = forms.PostForm(request.POST)
@@ -43,7 +43,7 @@ def post2db(request):
                 message = "您的訊息已儲存，要等管理者啟用後才看得到喔。"
                 post_form.save()
 
-                newest = Post.objects.all()
+                '''newest = Post.objects.all()
                 postid = '#'+str(newest[0].id)
                 words = newest[0].text
                 line, word = mestoimg.wordwrap(postid, words)
@@ -58,7 +58,7 @@ def post2db(request):
                 imgs.img.save(str(newest[0].id)+'.png', image_file)
                 imgs.text = newest[0].text
                 imgs.imgname = str(newest[0].id)+'.png'
-                imgs.save()
+                imgs.save()'''
                 return HttpResponseRedirect('/post2db/')
             else:
                 message = "reCAPTCHA驗證失敗，請再確認."
@@ -67,14 +67,12 @@ def post2db(request):
     else:
         post_form = forms.PostForm()
         message = '如要張貼訊息，則每一個欄位都要填...'
-    return render(request, 'post2db.html', locals())
-
-
-def wordtoimg(request):
-
-    showimg = Postimg.objects.all()
-    return render(request, 'images.html', locals())
+    return render(request, 'message.html', locals())
 
 
 def profile(request):
     return render(request, 'profile.html', locals())
+
+
+def portfolio(request):
+    return render(request, 'portfolio.html', locals())
