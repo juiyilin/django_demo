@@ -22,7 +22,7 @@ def index(request):
     return HttpResponse(html)
 
 
-def post2db(request):
+def message(request):
     posts = Post.objects.all()
 
     if request.method == 'POST':
