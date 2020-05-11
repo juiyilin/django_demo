@@ -9,17 +9,17 @@ from myblog import models, forms
 import json
 import urllib
 from django.conf import settings
-from io import BytesIO
+'''from io import BytesIO
 from django.core.files.uploadedfile import File
-from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.core.files.uploadedfile import InMemoryUploadedFile'''
 
 
 def index(request):
     template = get_template('index.html')
     posts = Post.objects.all()
-    now = datetime.now()
     html = template.render(locals())
     return HttpResponse(html)
+
 
 
 def message(request):
@@ -76,3 +76,11 @@ def profile(request):
 
 def portfolio(request):
     return render(request, 'portfolio.html', locals())
+
+
+def text_to_image(request):
+    return render(request, 'text_to_image.html', locals())
+
+
+def official_document_classify(request):
+    return render(request, 'official-document-classify.html', locals())

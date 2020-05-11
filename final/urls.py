@@ -20,12 +20,16 @@ from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 
-
+portfolio_url = [
+    path('', views.portfolio),
+    path('official-document-classify/', views.official_document_classify),
+    path('text_to_image/', views.text_to_image),
+]
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('message/', views.message),
     path('profile/', views.profile),
-    path('portfolio/', views.portfolio),
+    path('portfolio/', include(portfolio_url)),
     path("captcha/", include("captcha.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
