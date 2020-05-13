@@ -21,7 +21,6 @@ def index(request):
     return HttpResponse(html)
 
 
-
 def message(request):
     posts = Post.objects.all()
 
@@ -84,3 +83,15 @@ def text_to_image(request):
 
 def official_document_classify(request):
     return render(request, 'official-document-classify.html', locals())
+
+
+def web_crawler(request):
+    return render(request, 'web_crawler.html', locals())
+
+
+def covid19(request):
+    return render(request, 'covid19.html', locals())
+
+
+def newsletter_banner(request):
+    return render(request, 'newsletter_banner.html', locals())

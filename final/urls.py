@@ -22,8 +22,12 @@ from django.conf.urls.static import static
 
 portfolio_url = [
     path('', views.portfolio),
-    path('official-document-classify/', views.official_document_classify),
-    path('text_to_image/', views.text_to_image),
+    path('official-document-classify/',
+         views.official_document_classify, name='official'),
+    path('text_to_image/', views.text_to_image, name='image'),
+    path('web_crawler/', views.web_crawler, name='crawler'),
+    path('covid19/', views.covid19, name='covid'),
+    path('newsletter_banner/', views.newsletter_banner, name='banner'),
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),
