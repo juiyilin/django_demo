@@ -1,5 +1,16 @@
 {% extends "gist.html" %}
+{%load static%}
 
 {% block gist%}
 <script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js"></script>
+短文字
+<img src="{%static '20200514213938.png'%}"
+    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+中長度文字
+<img src="{%static '20200501160955.png'%}"
+    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+長文字
+
+<img src="{%static '20200514214729.png'%}"
+    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
 {% endblock %}
