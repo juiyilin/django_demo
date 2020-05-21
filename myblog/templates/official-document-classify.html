@@ -2,9 +2,37 @@
 {%load static%}
 
 {% block gist%}
-<script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js"></script>
-<p><img src="{%static 'official.png'%}" class="img-fluid" alt="">
+<p>在公司負責處理辦完的公文，流程如下：
 </p>
-<p><img src="{%static '20.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="20.png"></p>
+<ul style="list-style-type: decimal;">
+        <li>將收到的紙本公文編號</li>
+        <li>一一登錄到公文系統</li>
+        <li>按編號與公文類別收到各自的檔案夾中</li>
+        <li>每月匯出登錄表，存到部門資料夾供同仁檢視</li>
+</ul>
+<p>這支程式是基於流程4的步驟而做出的</p>
+<img src="{%static 'official.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="official">
+<p>實際動手操作要先選擇"收文歸檔"或"發文歸檔"，接著選"承辦單位(5種)"，歸檔狀態選"已歸檔"，按"查詢"再按"匯出"，
+        也就是說總共需要匯出10次、取10次名，再個別存到部門資料夾中對應的承辦單位資料夾中。
+</p>
+<p>雖然一個月做一次就好，但每次都很花時間，中斷的話常常不知道做到哪了，所以試著用程式完成了。</p>
+<p>程式會用到的模組如下</p>
+<script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify1.py">
+</script>
+<p>首先，承辦單位不挑選，直接匯出收文跟發文的各1個檔案(手動)，這裡可以看出檔名是當下的日期與時間(yyyymmddMMSS)</p>
+<img src="{%static 'officialdownload.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+        alt="officialdownload">
+<p>這邊開始是程式執行的部分。<br>先用time取得今天時間，用os到下載資料夾找出這兩個檔案</p>
+<script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify2.py">
+</script>
+<script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify3.py">
+</script>
+<p>用pandas挑出檔案中各承辦單位，依照歸檔編號排序，個別存檔並把舊檔刪除</p>
+<script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify4.py">
+</script>
+<p>完成後如下</p>
+<img src="{%static '20.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="20.png">
 {% endblock %}
