@@ -2,14 +2,28 @@
 {%load static%}
 
 {% block gist%}
-<script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js"></script>
-短文字
-<p><img src="{%static '20200514213938.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></p><br>
-中長度文字
-<p><img src="{%static '20200501160955.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></p><br>
-長文字
-<p><img src="{%static '20200514214729.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></p><br>
+<p>有天突然想到，某些靠北系粉專在投稿審核過後，會把文字轉換成圖片發文，部分社群軟體也有這種模式的貼文。因此仿造靠北工程師的格式完成如下：</p>
+<p>程式會用到的模組</p>
+<script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js?file=text_to_image1.py"></script>
+<p>wordwrap這個函式的目的在於，規定1行20個中文字、計算總行數</p>
+<script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js?file=text_to_image2.py"></script>
+<p>picture中的width與height設定圖片大小、font選擇可以支援中文的微軟正黑體。文字填入圖片時，邊界留一點空隙</p>
+<script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js?file=text_to_image3.py"></script>
+<p>執行時，輸入要做成圖片的文字，就會以當下的日期時間命名並存檔，但輸入文字時無法自行分段，輸入英文文字時產生的圖片會有點奇怪</p>
+<script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js?file=text_to_image4.py"></script>
+<p>完整程式碼</p>
+<script src="https://gist.github.com/juiyilin/c7d70e12de647833295d02000f3d1645.js?file=text_to_image5.py"></script>
+
+<h5>短文字</h5>
+<img src="{%static '20200514213938.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+<br>
+<h5>中長度文字</h5>
+<img src="{%static '20200526213511.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+<br>
+<h5>長文字</h5>
+<img src="{%static '20200514214729.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+<br>
 {% endblock %}
