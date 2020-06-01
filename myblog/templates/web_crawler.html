@@ -2,5 +2,23 @@
 {%load static%}
 
 {% block gist%}
-<script src="https://gist.github.com/juiyilin/c61ee88cc593c496d9491b6711af7533.js"></script>
+<p>因為偶然得知這家公司有參與2017台北市大運的聖火火炬設計，試著用爬蟲把官網的商品圖爬下來。</p>
+<div class="container p-10">
+    <p class="font-italic " style="color: gray;">
+        2020/5/29做測試時突然什麼都爬不到，才發現原來網站翻新成一頁式網頁，只好改寫程式碼。現在這個時間點網站可能還沒翻新完成，所以新版程式碼行數大概是原來的一半，未來網站再翻新可能還需要修改</p>
+</div>
+<p>這支程式是用google colaboratory完成的<br>
+    程式會用到的模組是最常見的requests跟bs4再加上os</p>
+<script src="https://gist.github.com/juiyilin/c61ee88cc593c496d9491b6711af7533.js?file=web_crawler1.py"></script>
+<p>把網址用requests.get產生物件再用bs4解析</p>
+<script src="https://gist.github.com/juiyilin/c61ee88cc593c496d9491b6711af7533.js?file=web_crawler2.py"></script>
+<p>由下圖黑框處可以知道，圖片連結跟名稱都被包在class="woocommerce-LoopProduct-link
+    woocommerce-loop-product__link"中，因此，用find_all找出全部再把連結跟名稱過濾出來</p>
+<a href="{%static 'iroda2.png'%}" target="_blank"><img src="{%static 'iroda2.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></a>
+<script src="https://gist.github.com/juiyilin/c61ee88cc593c496d9491b6711af7533.js?file=web_crawler3.py"></script>
+<p>連結用byte方式儲存到資料夾中，如果沒有的話就新建一個</p>
+<script src="https://gist.github.com/juiyilin/c61ee88cc593c496d9491b6711af7533.js?file=web_crawler4.py"></script>
+<p>完整程式碼</p>
+<script src="https://gist.github.com/juiyilin/c61ee88cc593c496d9491b6711af7533.js?file=web_crawler5.py"></script>
 {% endblock %}
