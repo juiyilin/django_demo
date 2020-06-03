@@ -11,8 +11,8 @@
         <li>每月匯出登錄表，存到部門資料夾供同仁檢視</li>
 </ul>
 <p>這支程式是基於流程4的步驟而做出的</p>
-<img src="{%static 'official.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="official">
+<img src="{%static 'official1.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="official1">
 <p>實際動手操作要先選擇"收文歸檔"或"發文歸檔"，接著選"承辦單位(5種)"，歸檔狀態選"已歸檔"，按"查詢"再按"匯出"，
         也就是說總共需要匯出10次、取10次名，再個別存到部門資料夾中對應的承辦單位資料夾中。
 </p>
@@ -21,9 +21,8 @@
 <script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify1.py">
 </script>
 <p>首先，承辦單位不挑選，直接匯出收文跟發文的各1個檔案(手動)，這裡可以看出檔名是當下的日期與時間(yyyymmddMMSS)</p>
-<img src="{%static 'officialdownload.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
-        alt="officialdownload">
+<img src="{%static 'official2.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="official2">
 <p>這邊開始是程式執行的部分。<br>先用time取得今天時間，用os到下載資料夾找出這兩個檔案</p>
 <script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify2.py">
 </script>
@@ -33,8 +32,12 @@
 <script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify4.py">
 </script>
 <p>完成後如下</p>
-<img src="{%static '20.png'%}"
-        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="20.png">
+<p><img src="{%static 'official3.png'%}"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                alt="official3"></p>
+<p><img src="{%static 'official4.png'%}"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                alt="official4"></p>
 <p>完整程式碼</p>
 <script src="https://gist.github.com/juiyilin/55d13c94dd964a816922b508ee23c286.js?file=official-document-classify4.py">
 </script>

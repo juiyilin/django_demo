@@ -2,8 +2,30 @@
 {%load static%}
 
 {% block gist%}
+<p>公司發行的電子報月刊，banner上的期數會隨著發行時間更新。公司的資訊人員會在年初做好12個月的份量給編輯，要是年中有人員異動，就要請他做新的。因為photoshop只有他的電腦有，為了不要麻煩他，乾脆自己來，並做成.exe讓沒裝python的人也能使用
+</p>
+<p>程式會用到的模組</p>
 <script src="https://gist.github.com/juiyilin/ec2a0bac6ca60af6d2afc9ba9b967660.js?file=newsletter_banner1.py"></script>
+<p>將所有資訊寫在記事本setting.txt中並設定可以程式可以讀取setting.txt的資料(如果找不到會自動建立一個)。之後需要更新資訊，直接修改setting.txt即可</p>
 <script src="https://gist.github.com/juiyilin/ec2a0bac6ca60af6d2afc9ba9b967660.js?file=newsletter_banner2.py"></script>
+<p>讀取後確認視窗顯示的內容是否正確，用while迴圈來避免使用者輸入y或n之外的內容。<br>
+    轉換記事本內容、設定放置在目標圖片的位子，完成後存檔。</p>
 <script src="https://gist.github.com/juiyilin/ec2a0bac6ca60af6d2afc9ba9b967660.js?file=newsletter_banner3.py"></script>
+<p>before <br>
+    <img src="{%static 'APECEpaperTitle (空白).png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></p>
+<p>after <br>
+    <img src="{%static '5月banner.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></p>
+<p>完整程式碼</p>
 <script src="https://gist.github.com/juiyilin/ec2a0bac6ca60af6d2afc9ba9b967660.js?file=newsletter_banner4.py"></script>
+<p>.exe執行畫面<br>
+    <img src="{%static 'exe.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="exe">
+    <img src="{%static 'exe2.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="exe2">
+</p>
+<p>滿心期待地帶著執行檔去公司測試的結果... <br>
+    <img src="{%static 'block.png'%}"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="block"></p>
 {% endblock %}
