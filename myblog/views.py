@@ -69,8 +69,8 @@ def message(request):
     return render(request, 'message.html', locals())
 
 
-def profile(request):
-    return render(request, 'profile.html', locals())
+def autobiography(request):
+    return render(request, 'autobiography.html', locals())
 
 
 def portfolio(request):

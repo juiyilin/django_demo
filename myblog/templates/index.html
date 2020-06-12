@@ -8,7 +8,7 @@
 
 <body>
     {% block body_title %}
-    <h1>Personal Data</h1>
+    <h1>PERSONAL DATA</h1>
     {% endblock %}
     {% block content %}
     <div class="container">
@@ -21,7 +21,10 @@
                     <li class='disabled nav-link text-reset'>CSS</li>
                     <li class='disabled nav-link text-reset'>Photoshop</li>
                     <li class='disabled nav-link text-reset'>Illustrator</li>
+                    <a href="{%url 'portfolio'%}" class="btn btn-outline-primary btn-sm">Portfolio</a>
+
                 </ul>
+
             </div>
             <div class="col-md-6 col-12">
                 <h4 class="font-weight-bold">Education</h4>
@@ -33,7 +36,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-6 col-12">
                 <h4 class="font-weight-bold">Work Experience</h4>
                 <ul>
 
@@ -60,6 +63,7 @@
 
 
     {% endblock %}
+
 </body>
 
 

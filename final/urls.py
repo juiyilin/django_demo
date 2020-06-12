@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 portfolio_url = [
-    path('', views.portfolio),
+    path('', views.portfolio, name='portfolio'),
     path('official-document-classify/',
          views.official_document_classify, name='official'),
     path('text_to_image/', views.text_to_image, name='image'),
@@ -33,7 +33,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('message/', views.message),
-    path('profile/', views.profile),
+    path('autobiography/', views.autobiography,name='autobiography'),
     path('portfolio/', include(portfolio_url)),
     path("captcha/", include("captcha.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

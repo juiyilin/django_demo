@@ -22,15 +22,21 @@
             </form>
         </div>
         <div class="col-md-6">
+
             {% for post in posts %}
-            <p> {{post.name}} <br>
-                {{post.pub_date}}</p>
-            <p style="border: 0.5px solid gray;border-radius: 4px;"> {{post.text}}</p>
 
+            <h4> {{post.name}} </h4>
+            <h6> {{post.pub_date}}</h6>
+            <div class="card">
+                <div class="card-body">
+                    <p> {{post.text}}</p>
+
+                </div>
+            </div>
             <p>-----------------------------</p>
-
             {% endfor %}
         </div>
     </div>
+</div>
 </div>
 {% endblock %}

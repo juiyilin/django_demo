@@ -2,64 +2,69 @@
 {% block body_title %}
 <h1>PORTFOLIO</h1>
 {% endblock %}
-
+{%load static%}
 {% block content %}
-<ul>python
-    <li><a href="text_to_image/">文字寫到圖片</a></li>
-    <li><a href="official-document-classify/">公文整理</a></li>
-    <li><a href="covid19/">covid19</a></li>
-    <li><a href="newsletter_banner/">電子報banner修改</a></li>
-    <li><a href="web_crawler/">簡單網路爬蟲</a></li>
-    <li class="nav-item pill-1">
-        <a class="nav-link px-0 " href="{%url 'crawler'%}">簡單網路爬蟲</a>
-    </li>
-    <li class="nav-item pill-1">
-        <a class="nav-link px-0 " href="{%url 'image'%}">文字寫到圖片</a>
-    </li>
-    <li class="nav-item pill-1">
-        <a class="nav-link px-0 " href="{%url 'official'%}">公文整理</a>
-    </li>
-    <li class="nav-item pill-1">
-        <a class="nav-link px-0 " href="{%url 'banner'%}">電子報banner修改</a>
-    </li>
-    <li class="nav-item pill-1">
-        <a class="nav-link px-0 " href="{%url 'covid'%}">COVID-19資料視覺化</a>
-    </li>
-</ul>
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+<div class="container">
+    <div class="row ">
+        <h3>python</h3>
+    </div>
+    <div class="row ">
+        <!-- <div class="col-md-3 my-2">
+            <div class="card">
+
+                <div class="card-body ">
+                    <h6 class="card-title">簡單網路爬蟲</h6>
+                    <a href="{%url 'crawler'%}"> <img src="{%static 'iroda.png'%}" class="card-img"></a>
+                    <a href="{%url 'crawler'%}" class="btn btn-outline-secondary btn-sm float-right mt-2">See</a>
+                </div>
+            </div>
+        </div> -->
+        <div class=" col-md-3 my-2">
+            <div class="card">
+
+                <div class="card-body">
+                    <h6 class="card-title">文字寫到圖片</h6>
+                    <a href="{%url 'image'%}"> <img src="{%static '20200514213938.png'%}" class="card-img"></a>
+
+                    <a href="{%url 'image'%}" class="btn btn-outline-secondary btn-sm float-right mt-2">See</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 my-2">
+            <div class="card">
+
+                <div class="card-body">
+                    <h6 class="card-title">公文整理</h6>
+                    <a href="{%url 'official'%}"> <img src="{%static 'official3.png'%}" class="card-img"></a>
+
+                    <a href="{%url 'official'%}" class="btn btn-outline-secondary btn-sm float-right mt-2">See</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 my-2">
+            <div class="card">
+
+                <div class="card-body">
+                    <h6 class="card-title">電子報banner修改</h6>
+                    <a href="{%url 'banner'%}"> <img src="{%static '5月banner.png'%}" class="card-img"></a>
+
+                    <a href="{%url 'banner'%}" class="btn btn-outline-secondary btn-sm float-right mt-2">See</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 my-2">
+            <div class="card">
+
+                <div class="card-body">
+                    <h6 class="card-title">COVID-19資料視覺化</h6>
+                    <a href="{%url 'covid'%}"> <img src="{%static 'Asia.png'%}" class="card-img"></a>
+
+                    <a href="{%url 'covid'%}" class="btn btn-outline-secondary btn-sm float-right mt-2">See</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-</div>
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
 {% endblock %}

@@ -122,3 +122,7 @@ body {
     margin: 5% 0;
 
 }
+
+.thumbnail {
+    border-radius: 25px;
+}

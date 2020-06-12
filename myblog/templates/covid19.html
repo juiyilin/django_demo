@@ -2,17 +2,20 @@
 {%load static%}
 
 {% block gist%}
-<p>資料來源：<a href="https://github.com/CSSEGISandData/COVID-19.git">https://github.com/CSSEGISandData/COVID-19.git</a><br>
-    製圖參考：<a
-        href="https://www.kaggle.com/hotstaff/covid-19-cases-global-map-use-github/notebook">https://www.kaggle.com/hotstaff/covid-19-cases-global-map-use-github/notebook</a><br>
-    <p>完整程式碼 <a href="https://colab.research.google.com/drive/1SDbE0lUJJH7KMResPEhNKlmv_YZYQzP_?usp=sharing">(google
-            colaboratory)</a> </p>
-    <img src="{%static 'covid19_fast.gif'%}"
+<p>資料來源：<a href="https://github.com/CSSEGISandData/COVID-19.git">https://github.com/CSSEGISandData/COVID-19.git</a>
+</p>
+<p>製圖參考：<a
+                href="https://www.kaggle.com/hotstaff/covid-19-cases-global-map-use-github/notebook">https://www.kaggle.com/hotstaff/covid-19-cases-global-map-use-github/notebook</a>
+</p>
+<p>完整程式碼 <a href="https://colab.research.google.com/drive/1SDbE0lUJJH7KMResPEhNKlmv_YZYQzP_?usp=sharing">(google
+                colaboratory)</a> </p>
+<img src="{%static 'covid19_fast.gif'%}"
         class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-    <img src="{%static 'Asia.png'%}" class="img-fluid" alt="">
-    <img src="{%static 'Europe.png'%}" class="img-fluid" alt="">
-    <img src="{%static 'North America.png'%}" class="img-fluid" alt="">
-    <img src="{%static 'South America.png'%}" class="img-fluid" alt="">
-    <img src="{%static 'Oceania.png'%}" class="img-fluid" alt="">
-    <img src="{%static 'Africa.png'%}" class="img-fluid" alt="">
-    {% endblock %}
+<img src="{%static 'Asia.png'%}" class="img-fluid" alt="">
+<img src="{%static 'Europe.png'%}" class="img-fluid" alt="">
+<img src="{%static 'North America.png'%}" class="img-fluid" alt="">
+<img src="{%static 'South America.png'%}" class="img-fluid" alt="">
+<img src="{%static 'Oceania.png'%}" class="img-fluid" alt="">
+<img src="{%static 'Africa.png'%}" class="img-fluid" alt="">
+
+{% endblock %}
