@@ -58,7 +58,7 @@ def message(request):
                 imgs.text = newest[0].text
                 imgs.imgname = str(newest[0].id)+'.png'
                 imgs.save()'''
-                return HttpResponseRedirect('/post2db/')
+                return HttpResponseRedirect('/message/')
             else:
                 message = "reCAPTCHA驗證失敗，請再確認."
         else:
