@@ -20,3 +20,5 @@ class PostForm(forms.ModelForm):
         self.fields["name"].label = "暱稱"
         self.fields["text"].label = "留言"
         #self.fields["captcha"].label = "我不是機器人"
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})

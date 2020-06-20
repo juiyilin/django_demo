@@ -12,15 +12,15 @@
     {% endif %}
     <div class="row">
         <div class="col-md-6">
-            <form name='my form' action='.' method='POST'>
+            <form name='my form' action='.' method='POST' class="form-group">
                 {% csrf_token %}
                 <table>
                     {{ post_form.as_table }}
                 </table>
                 <script src='https://www.google.com/recaptcha/api.js'></script>
                 <div class="g-recaptcha" data-sitekey="6LdzBtYUAAAAABQBQWZSTatJ1tgjUe0pDO-trTnu"></div>
-                <input type='submit' value='張貼'>
-                <input type='reset' value='清除重填'>
+                <input type='submit' value='張貼' class="btn btn-light" style="border: rgb(148, 148, 148) solid 1px;">
+                <input type='reset' value='清除重填' class="btn btn-light" style="border: rgb(148, 148, 148) solid 1px;">
             </form>
         </div>
         <div class="col-md-6">

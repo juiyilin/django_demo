@@ -39,7 +39,6 @@ def message(request):
             result = json.loads(response.read().decode())
             if result['success']:
 
-                message = "您的訊息已儲存，要等管理者啟用後才看得到喔。"
                 post_form.save()
 
                 '''newest = Post.objects.all()
@@ -62,10 +61,10 @@ def message(request):
             else:
                 message = "reCAPTCHA驗證失敗，請再確認."
         else:
-            message = '如要張貼訊息，則每一個欄位都要填...'
+            message = '如要張貼訊息，則每一個欄位都要填'
     else:
         post_form = forms.PostForm()
-        message = '如要張貼訊息，則每一個欄位都要填...'
+        message = '如要張貼訊息，則每一個欄位都要填'
     return render(request, 'message.html', locals())
 
 
