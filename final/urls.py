@@ -28,12 +28,14 @@ portfolio_url = [
     path('web_crawler/', views.web_crawler, name='crawler'),
     path('covid19/', views.covid19, name='covid'),
     path('newsletter_banner/', views.newsletter_banner, name='banner'),
+    path('unsubscribe_email/', views.unsubscribe_email, name='unsubscribe'),
+
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('message/', views.message),
-    path('autobiography/', views.autobiography,name='autobiography'),
+    path('autobiography/', views.autobiography, name='autobiography'),
     path('portfolio/', include(portfolio_url)),
     path("captcha/", include("captcha.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

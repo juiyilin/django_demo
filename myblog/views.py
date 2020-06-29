@@ -94,3 +94,6 @@ def covid19(request):
 
 def newsletter_banner(request):
     return render(request, 'newsletter_banner.html', locals())
+
+def unsubscribe_email(request):
+    return render(request, 'unsubscribe_email.html', locals())

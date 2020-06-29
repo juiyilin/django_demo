@@ -1,0 +1,25 @@
+{% extends "gist.html" %}
+{%load static%}
+
+{% block gist%}
+<p>在寄送電子報後，因為訂閱者畢業或離職等原因，讓電子報無法送達，系統會寄送未傳遞信件的通知信到負責同仁的信箱。</p>
+<img src="{%static 'undeliver.png'%}"
+    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="123">
+<p>為了不要讓同事信箱被塞爆，必須把這些email取消訂閱。數量曾經達到接近100封，所以選擇用程式刪除。
+    <br>因為我不是公司的資訊人員，沒辦法直接從資料庫刪除這些資料，只好使用selenium暴力解決。</p>
+<p>這支程式是在google colaboratory上運作的，一些需安裝的及設定如下</p>
+<script src="https://gist.github.com/juiyilin/d11c7646f0e6327f8512098acabf0ac5.js?file=unsubscribe_email.md"></script>
+<p>同事會把所有通知信轉給我，全部存檔並把email單獨拉出來</p>
+<script src="https://gist.github.com/juiyilin/d11c7646f0e6327f8512098acabf0ac5.js?file=unsubscribe_email1.py"></script>
+<script src="https://gist.github.com/juiyilin/d11c7646f0e6327f8512098acabf0ac5.js?file=unsubscribe_email2.py"></script>
+<p>再利用selenium到網站前端一一取消訂閱(也因為前端可以取消訂閱，不用從後台登入，也不用填驗證碼，輕鬆很多)</p>
+<img src="{%static 'unsubscribe.png'%}"
+    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+<script src="https://gist.github.com/juiyilin/d11c7646f0e6327f8512098acabf0ac5.js?file=unsubscribe_email3.py"></script>
+<img src="{%static 'unsubscribe_finish.png'%}"
+    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+
+<p>完整程式碼</p>
+<script src="https://gist.github.com/juiyilin/d11c7646f0e6327f8512098acabf0ac5.js?file=unsubscribe_email4.py"></script>
+
+{% endblock %}
