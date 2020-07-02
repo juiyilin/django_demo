@@ -15,10 +15,8 @@ from django.core.files.uploadedfile import InMemoryUploadedFile'''
 
 
 def index(request):
-    template = get_template('index.html')
     posts = Post.objects.all()
-    html = template.render(locals())
-    return HttpResponse(html)
+    return render(request, 'index.html', locals())
 
 
 def message(request):
