@@ -1,0 +1,188 @@
+.iphonex {
+    background-size: cover;
+    top: 100px;
+    margin: 0 auto;
+    position: relative;
+    background-position-x: 0px;
+    background-position-y: -6px;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 800px;
+    opacity: 0.8;
+}
+
+.body {
+    width: 394px;
+    height: 781px;
+    border: 1px solid rgb(201, 201, 201);
+    position: absolute;
+    left: 2.5px;
+    top: 1px;
+    border-radius: 58px;
+    box-shadow: inset 0 0 26px rgb(192, 192, 192);
+    /* background-color: gray; */
+}
+
+.screenx {
+    width: 379px;
+    height: 765px;
+    border: 18px solid black;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    border-radius: 52px;
+    z-index: 2;
+}
+
+.head {
+    width: 186px;
+    height: 27px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 107px;
+    top: 26px;
+    border-radius: 0 0 22px 22px;
+}
+
+.head::before,
+.head::after {
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 7px;
+}
+
+.head::before {
+    background: radial-gradient(circle at bottom left, transparent 0 70%, black 70% 100%);
+    left: -6px;
+
+}
+
+.head::after {
+    background: radial-gradient(circle at bottom right, transparent 0 70%, black 70% 100%);
+    right: -7px;
+}
+
+.micx {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: rgb(49, 49, 65);
+    border-radius: 10px;
+    top: 34px;
+    left: 177px;
+
+}
+
+.camerax {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: rgb(49, 49, 65);
+    border-radius: 50%;
+    top: 33px;
+    left: 235px;
+
+}
+
+#teleline-x-1 {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(182, 182, 182), rgb(182, 182, 182));
+    width: 9px;
+    height: 10px;
+    top: 76px;
+    left: 3px;
+
+}
+
+#teleline-x-2 {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(182, 182, 182), rgb(182, 182, 182));
+    width: 9px;
+    height: 10px;
+    top: 76px;
+    right: 4px;
+
+    transform: rotate(180deg);
+}
+
+#teleline-x-3 {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(182, 182, 182), rgb(182, 182, 182));
+    width: 9px;
+    height: 10px;
+    bottom: 92px;
+    left: 3px;
+
+}
+
+#teleline-x-4 {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(182, 182, 182), rgb(182, 182, 182));
+    width: 9px;
+    height: 10px;
+    bottom: 92px;
+    right: 4px;
+
+    transform: rotate(180deg);
+}
+
+#button-x-right {
+    width: 4px;
+    height: 85px;
+    border-style: solid;
+    border-width: 2px 0.5px;
+    border-color: rgb(216, 216, 216);
+    position: absolute;
+    top: 180px;
+    border-radius: 2px;
+    right: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: -200;
+    box-shadow: inset 0 0 1.5px #444;
+}
+
+#button-x-left-1 {
+    width: 4px;
+    height: 29px;
+    border-style: solid;
+    border-width: 2px 0.5px;
+    border-color: rgb(216, 216, 216);
+    position: absolute;
+    top: 109px;
+    left: -1px;
+    z-index: -1;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1.5px #444;
+    background-color: rgb(255, 255, 255);
+}
+
+#button-x-left-2 {
+    width: 4px;
+    height: 54px;
+    border-style: solid;
+    border-width: 2px 0.5px;
+    border-color: rgb(216, 216, 216);
+    position: absolute;
+    top: 162px;
+    left: -1px;
+    z-index: -1;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1.5px #444;
+    background-color: rgb(255, 255, 255);
+}
+
+#button-x-left-3 {
+    width: 4px;
+    height: 54px;
+    border-style: solid;
+    border-width: 2px 0.5px;
+    border-color: rgb(216, 216, 216);
+    position: absolute;
+    top: 229px;
+    left: -1px;
+    z-index: -1;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1.5px #444;
+    background-color: rgb(255, 255, 255);
+}

@@ -29,6 +29,7 @@ portfolio_url = [
     path('covid19/', views.covid19, name='covid'),
     path('newsletter_banner/', views.newsletter_banner, name='banner'),
     path('unsubscribe_email/', views.unsubscribe_email, name='unsubscribe'),
+    path('cssiphone/', views.iphone, name='iphone'),
 
 ]
 urlpatterns = [

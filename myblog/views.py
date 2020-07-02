@@ -77,23 +77,28 @@ def portfolio(request):
 
 
 def text_to_image(request):
-    return render(request, 'text_to_image.html', locals())
+    return render(request, 'portfolios/text_to_image.html', locals())
 
 
 def official_document_classify(request):
-    return render(request, 'official-document-classify.html', locals())
+    return render(request, 'portfolios/official-document-classify.html', locals())
 
 
 def web_crawler(request):
-    return render(request, 'web_crawler.html', locals())
+    return render(request, 'portfolios/web_crawler.html', locals())
 
 
 def covid19(request):
-    return render(request, 'covid19.html', locals())
+    return render(request, 'portfolios/covid19.html', locals())
 
 
 def newsletter_banner(request):
-    return render(request, 'newsletter_banner.html', locals())
+    return render(request, 'portfolios/newsletter_banner.html', locals())
+
 
 def unsubscribe_email(request):
-    return render(request, 'unsubscribe_email.html', locals())
+    return render(request, 'portfolios/unsubscribe_email.html', locals())
+
+
+def iphone(request):
+    return render(request, 'portfolios/iphone.html', locals())
