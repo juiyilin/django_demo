@@ -1,12 +1,13 @@
 .overflow {
     overflow-x: scroll;
-    width: 100%;
+    width: 300px;
+    border: red solid 8px;
     height: 1000px;
-    margin: 0 auto;
-
 }
 
-
+p {
+    color: green;
+}
 
 
 .iphonex {
@@ -20,6 +21,7 @@
     width: 400px;
     height: 800px;
     opacity: 0.8;
+    overflow-x: scroll;
 }
 
 .body {
