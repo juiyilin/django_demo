@@ -1,7 +1,6 @@
 .vscode
 *.pyc
 __pycache__
-db.sqlite3
 Include
 Lib
 Scripts
